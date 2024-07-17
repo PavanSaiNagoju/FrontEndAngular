@@ -1,0 +1,43 @@
+<h3>Edit Loan Application</h3>
+<form #LoanAppForm="ngForm" (ngSubmit)='submitEditForm()' >
+    <table class="table table-dark table-striped">
+   <tr>
+    <td>Door No:</td>
+   <td> <input required type='text' [(ngModel)] = 'updatedLoanApplication.doorNo'  name='doorNo' #loanDoorNoControl="ngModel"/></td>
+    <span *ngIf="loanDoorNoControl.touched"> Door No is Required</span>
+    </tr>
+    <tr>
+    <td>
+    Existing Emi:</td>
+    <td>
+    <input required type='number' [(ngModel)] = 'updatedLoanApplication.existingEMI' name='existingEmi' #loanExistingEmiControl="ngModel"/></td>
+    <span *ngIf="loanExistingEmiControl.invalid && loanExistingEmiControl.touched">Existing Emi is Required</span>
+    </tr>
+    <tr>
+    <td>Tenure:</td>
+    <td><input required type='number' [(ngModel)] = 'updatedLoanApplication.tenure' name='tenure' #loanTenureControl="ngModel"/></td>
+    <span *ngIf="loanTenureControl.invalid && loanTenureControl.touched">Tenure is Required</span>
+    </tr>
+   <tr>
+       <td>Interest in percentage:</td>
+    <td><input required type='number' [(ngModel)] = 'updatedLoanApplication.interest' name='interest' [disabled]=true #loanControl="ngModel"/></td>
+<td><span *ngIf="loanControl.invalid && loanControl.touched"> is Required</span></td>
+</tr> 
+<tr>
+    <td>Amount of loan:</td>
+<td><input required type='number' [(ngModel)] = 'updatedLoanApplication.amount' name='amount' #loanAmountControl="ngModel"/></td>
+    <span *ngIf="loanAmountControl.invalid && loanAmountControl.touched">Amount of Loan is Required</span>
+</tr>
+<!--"{{newLoanApplication.appdate | date: 'dd/MM/yyyy' }} -->
+<tr>
+    <td>Application date:</td>
+<td><input required type='text' value = "{{updatedLoanApplication.appdate | date: 'dd/MM/yyyy' }}" name='appdate'/></td>
+  <!--  <span *ngIf="loanDateControl.invalid && loanDateControl.touched">Application Date is Required</span> -->
+</tr>
+
+</table> 
+
+   <button type ="submit" class='btn btn-secondary' >Edit</button>
+  
+
+</form>  

@@ -1,0 +1,30 @@
+<br>
+
+<h3 class="col text-center">Please click any of these to view your loan applications or return to home page</h3>
+
+<br>
+
+
+<div class="container">
+    <div class="row text-center">
+      <div class="col text-center">
+        <form >
+        <!--div class="search-container">
+            
+                <h6>Please enter DoorNo</h6>
+              <input type="text" [(ngModel)]='doorNo' placeholder="Search for a loan.." name="search">
+              <button type="submit" (click)=searchLoan() name="button">Submit</button>
+            </div-->
+            </form>
+            <br>
+            <br>
+          
+        <button style="color:black; margin:5px;" class=' btn-lg btn btn-dark btn-block' (click)='viewPendingLoanAppButton()'><b>View your Pending Loan Applications</b></button><br><br>
+<button style="color:black; margin:5px;" class=' btn-lg btn btn-dark btn-block' (click)='viewApprovedLoanAppButton()'><b>View your Approved Loan Applications</b></button><br><br>
+<!--button style="color:black; margin:5px;" class=' btn-lg btn btn-dark btn-block' (click)='viewAccountDetails()'><b>View your Loan Emi, Account details</b></button><br><br-->
+<button style="color:black; margin:5px;" class=' btn-lg btn btn-dark btn-block' (click)='viewRejectedLoanAppButton()'><b>View your Rejected Loan Applications</b></button><br><br>
+<button style="color:black; margin:5px;" class=' btn-lg btn btn-dark btn-block' (click)='returnToHome()'><b>Return to  home</b></button>
+      </div>
+    </div>
+  </div>
+

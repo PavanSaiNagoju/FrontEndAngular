@@ -1,0 +1,16 @@
+<div class="card bg-dark text-white">
+<div class="card-body text-centre ">
+<p class="card-title text-centre"> Door No : {{loan.doorNo}}</p>
+<p class="card-text">Existing EMI : {{loan.existingEMI}}</p>
+<p class="card-text">Tenure : {{loan.tenure}}</p>
+<p class="card-text">Interest Rate : {{loan.interest}}</p>
+<p class="card-text">Amount: {{loan.amount}}</p>
+
+<p class="card-text">Status : {{loan.status}}</p>
+<p class="card-text">UserId :{{loan.user.userId}}</p>
+
+      <p class="card-text"><button (click)='updatePendingLoanApplication(loan)'> Edit</button></p>
+     
+</div>
+</div>
+<br>

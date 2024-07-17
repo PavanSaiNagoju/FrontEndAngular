@@ -1,0 +1,18 @@
+<h1>Your Approved Loan Applications</h1>
+<div *ngFor="let loan of loanApplications;">
+
+        <p class="card-title text-centre">Door No : {{loan.doorNo}}</p>
+              <p class="card-text">Existing EMI : {{loan.existingEMI}}</p>
+              <p class="card-text">Tenure : {{loan.tenure}}</p>
+              <p class="card-text">Interest Rate : {{loan.interest}}</p>
+              <p class="card-text">Amount: {{loan.amount}}</p>
+              <p class="card-text">Application Date: {{loan.appdate}}</p>
+              <p class="card-text">Status : {{loan.status}}</p>
+              <p class="card-text">UserId :{{loan.user.userId}}</p>
+              
+        
+        </div>
+ 
+
+
+<div>

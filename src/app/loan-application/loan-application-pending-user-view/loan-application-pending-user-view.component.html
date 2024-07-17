@@ -1,0 +1,16 @@
+<h1>Your Pending Loan Application</h1>
+
+<div class="card-deck ">
+    <div  *ngFor="let loan of loanApplications;">
+    <app-loan-application-pending-user-show
+        [loan]='loan'
+        (update)='updatePendingLoanApplicationParent(loan)'
+        >
+    </app-loan-application-pending-user-show>
+      
+     
+</div>
+
+<div>
+
+

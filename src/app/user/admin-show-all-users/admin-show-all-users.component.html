@@ -1,0 +1,30 @@
+<div class = "container mt-5">
+    <h1 style="color: maroon;" class="card-body text-center">LIST OF USER APPLICATIONS</h1>
+    <div class="card-deck container-fluid">
+      <link rel = "stylesheet" type="text/css" href="admin-show-all-users.component.html">
+      <div class="col-md-4" *ngFor="let users of showAllUserArray;">
+          <div class = "card bg-dark text-white">
+              <div class="card-body text-center">
+                  <p class = "card-title text-center">User Email:{{users.email}}</p>
+                  <p class="card-text">Age:{{users.age}}</p>
+                  <p class="card-text">Gender:{{users.gender}}</p>
+                  <p class="card-text">Mobile No:{{users.mobile}}</p>
+                  <p class="card-text">Name:{{users.name}}</p>
+                  <p class="card-text">UserId:{{users.userdetails.userId}}</p>
+                  <p class="card-text">Address:{{users.userdetails.address}}</p>
+                  <p class="card-text">State:{{users.userdetails.state}}</p>
+                  <p class="card-text">City:{{users.userdetails.city}}</p>
+                  <p class="card-text">Pin:{{users.userdetails.pin}}</p>
+                  <p class="card-text">EmployeeType:{{users.userdetails.emptype}}</p>
+                  <p class="card-text">Salary:{{users.userdetails.salary}}</p>
+                  <p class="card-text">Aadhar:<a href='{{users.userdetails.aadhar}}'>{{users.userdetails.aadhar}}</a></p>
+                  <p class="card-text">Pan:<a href='{{users.userdetails.pan}}'>{{users.userdetails.pan}}</a></p>
+                  <p class="card-text">SalarySlip:<a href='{{users.userdetails.salarySlip}}'>{{users.userdetails.salarySlip}}</a></p>
+                  <p class="card-text">AddressProof:<a href='{{users.userdetails.addressProof}}'>{{users.userdetails.addressProof}}</a></p>
+              </div>
+          </div>
+     
+      </div>
+      <button type="submit" class="btn btn-primary btn-block gap" (click)='goBack()'>Back</button>
+    </div>
+    </div>

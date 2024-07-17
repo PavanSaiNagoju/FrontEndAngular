@@ -1,0 +1,108 @@
+
+<body>
+    <div class="container">
+        <br><br>
+        <section class="row justify-content-center">
+            <legend style="color:black" class="row justify-content-center">
+                <u><b>User Details for loan requirement</b></u></legend>
+            <!-- <h1 style="color:maroon;">User Details</h1> -->
+        </section>
+        <!-- </div> -->
+        <div class="container col-md-10">
+
+            <section class="row justify-content-center">
+                <form class="form-horizontal">
+                    <form action="" #userForm="ngForm" (ngSubmit)="addUserDetails()"><br>
+                        <div class="form-group" style="color:black">
+                            <label class="col-md-4 control-label col-xs-12 justify-content-center"
+                                for="">UserId</label>
+                            <input type="text" 
+                                [(ngModel)]="userModule.userId" name="nuserid" #nuserid="ngModel" required><br>
+                            <div *ngIf="nuserid.invalid && nuserid.touched" style="color:black"> User ID is Required
+                            </div>
+                        </div>
+                        <div class="form-group" style="color:black">
+                            <label class="col-md-4 control-label col-xs-12 justify-content-center"
+                                for="">Address</label>
+                            <input type="text" class="form-control" placeholder="District, Area, Street"
+                                [(ngModel)]="userModule.address" name="naddress" #naddress="ngModel" required><br>
+                            <div *ngIf="naddress.invalid && naddress.touched" style="color:black"> Address is Required
+                            </div>
+                        </div>
+                        <div class="form-group" style="color:black">
+                            <label class="col-md-4 control-label col-xs-12" for="">State</label>
+                            <input type="text" class="form-control" placeholder="state" [(ngModel)]="userModule.state"
+                                name="nstate" #nstate="ngModel" required><br>
+                            <div *ngIf="nstate.invalid && nstate.touched" style="color:black"> State is Required</div>
+                        </div>
+                        <div class="form-group" style="color:black">
+                            <label class="col-md-4 control-label col-xs-12" for="">City</label><br>
+                            <input type="text" class="form-control" placeholder="city" [(ngModel)]="userModule.city"
+                                name="ncity" #ncity="ngModel" required><br>
+                            <div *ngIf="ncity.invalid && ncity.touched" style="color:black"> City is Required</div>
+                        </div>
+                        <div class="form-group" style="color:black">
+                            <label class="col-md-4 control-label col-xs-12" for="">Pin</label>
+                            <input type="text" class="form-control" placeholder="pin" [(ngModel)]="userModule.pin"
+                                name="npin" #npin="ngModel" required><br>
+                            <div *ngIf="npin.invalid && npin.touched" style="color:black"> Pin is Required</div>
+                        </div>
+                        <div class="form-group" style="color:black">
+                            <label for="">EmployeeType</label>
+                            <input type="text" class="form-control" placeholder="full-time,part-time"
+                                [(ngModel)]="userModule.emptype" name="nempType" #empType="ngModel" required><br>
+                        </div>
+                        <!-- <p>
+        <input type="radio" value="part-time" name="nempType" [ngModel]="userModule.emptype" > Part-Time
+        <input type="radio" value="full-time" name="nempType" [ngModel]="userModule.emptype" > Full-Time
+        <input type="radio" value="casual" name="nempType" [ngModel]="userModule.emptype" > Casual
+     <p>
+        <input type="checkbox" name="nempType" [ngModel]="userModule.isnempTypeAccepted" >
+     </p>   -->
+     <!-- <select class="custom-select">
+         <option>Full-Time</option>
+         <option>Part-Time</option>
+         <option>Casual</option> 
+
+     </select> -->
+                        <!-- <div class="form-group" style="color:white">
+                            <label for="">EmpType</label>
+                            <input type="text" class="form-control" placeholder="EmpType"
+                                [(ngModel)]="userModule.emptype" name="nempType" #nempType="ngModel" required><br>
+                        </div> -->
+                        <div class="form-group" style="color:black">
+                            <label for="">Salary</label>
+                            <input type="number" class="form-control" placeholder="Salary"
+                                [(ngModel)]="userModule.salary" name="nsalary" #nsalary="ngModel" required><br>
+                        </div>
+                        <div class="form-group" style="color:black">
+                            <label for="">Aadhar</label>
+                            <input type="url" class="form-control" placeholder="aadharUrl.com" [(ngModel)]="userModule.aadhar"
+                                name="naadhar" #naadhar="ngModel" required><br>
+                        </div>
+                        <div class="form-group" style="color:black">
+                            <label for="">Pan</label>
+                            <input type="url" class="form-control" placeholder="panUrl.com" [(ngModel)]="userModule.pan"
+                                name="npan" #pan="ngModel" required><br>
+                        </div>
+                        <div class="form-group" style="color:black">
+                            <label for="">SalarySlip</label>
+                            <input type="url" class="form-control" placeholder="salarySlipUrl.com"
+                                [(ngModel)]="userModule.salarySlip" name="nsslip" #nsslip="ngModel" required><br>
+                        </div>
+                        <div class="form-group" style="color:black">
+                            <label for="">AddressProof</label>
+                            <input type="url" class="form-control" placeholder="addressProofUrl.com"
+                                [(ngModel)]="userModule.addressProof" name="nadpf" #nadpf="ngModel" required>
+                        </div>
+                        <br><br>
+                        <button class="btn btn-info justify-content-center" type="submit" class="btn-block"
+                            style="color:black">Submit</button><br><br>
+                    </form>
+                </form>
+
+            </section>
+        </div>
+
+    </div>
+</body>

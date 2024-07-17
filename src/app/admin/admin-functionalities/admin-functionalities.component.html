@@ -1,0 +1,30 @@
+<link ref = "stylesheet" type="text/css" href="admin-login.component.css">
+<body>
+  <ul class="nav navbar navbar-dark bg-dark justify-content-end">
+    <button><a (click)='home()'>LogOut</a></button>
+  </ul>
+<header> 
+<div class="center">
+  <h1 style="color: black" class="title">Welcome</h1>
+ 
+<div class="center">
+  <h2 class="row justify-content-center">
+  <button type="pending" style="color: black" class="btn btn-outline-secondary" (click)='getAllPending()'>PENDING LOAN APPLICATIONS</button><br>
+  </h2>
+  <h3 class="row justify-content-center"> 
+  <button type="submit" style="color: black" class="btn btn-outline-secondary" (click)='getAllApproved()'>APPROVED LOAN APPLICATIONS</button><br>
+  </h3> 
+  <!--h4 class="row justify-content-center"> 
+    <button type="submit" style="color: rgb(39, 21, 21)" class="btn btn-outline-secondary" (click)='getAccountDetails()'>APPROVED LOAN APPLICATIONS WITH ACCOUNT AND EMI</button><br>
+    </h4--> 
+  <h5 class="row justify-content-center">  
+  <button type="rejected" style="color:black" class="btn btn-outline-secondary" (click)='getAllRejected()'>REJECTED LOAN APPLICATIONS</button><br>
+  </h5>
+  <h6 class="row justify-content-center">
+  <button type="showAllUsers" style="color:black" class="btn btn-outline-secondary" (click)='showAllUsers()'>SHOW ALL USERS</button><br>
+  </h6>
+</div>
+</div>
+
+</header>
+</body>

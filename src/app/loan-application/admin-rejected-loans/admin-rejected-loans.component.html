@@ -1,0 +1,32 @@
+<div class = "container mt-5">
+    <h1 style="color: maroon;" class="card-body text-center">LIST OF REJECTED APPLICATIONS</h1>
+    <div class="card-deck container-fluid">
+        <link rel = "stylesheet" type="text/css" href="admin-rejected-loans.component.css">
+        <div class="col-md-4" *ngFor="let loan of loanRejectedArray;">
+            <div class = "card bg-dark text-white">
+                <div class="card-body text-center">
+     
+                   <p class = "card-title text-center">DoorNo:{{loan.doorNo}}</p>
+                    <p class="card-text">ExistingEMI:{{loan.existingEMI}}</p>
+                    <p class="card-text">Tenure:{{loan.tenure}}</p>
+                    <p class="card-text">Interest:{{loan.interest}}</p>
+                    <p class="card-text">Amount:{{loan.amount}}</p>
+                    <p class="card-text">Status:{{loan.status}}</p>
+                    <p class="card-text">UserId:{{loan.user.userId}}</p>
+                    <p class="card-text">Address:{{loan.user.address}}</p>
+                    <p class="card-text">State:{{loan.user.state}}</p>
+                    <p class="card-text">City:{{loan.user.city}}</p>
+                    <p class="card-text">Pin:{{loan.user.pin}}</p>
+                    <p class="card-text">EmployeeType:{{loan.user.emptype}}</p>
+                    <p class="card-text">Salary:{{loan.user.salary}}</p>
+                    <p class="card-text">Aadhar:<a href="{{loan.user.aadhar}}">{{loan.user.aadhar}}</a></p>
+                    <p class="card-text">Pan:<a href="{{loan.user.pan}}">{{loan.user.pan}}</a></p>
+                    <p class="card-text">SalarySlip:<a href="{{loan.user.salarySlip}}">{{loan.user.salarySlip}}</a></p>
+                    <p class="card-text">AddressProof:<a href="{{loan.user.addressProof}}">{{loan.user.addressProof}}</a></p> 
+                </div>
+            </div>
+            <br>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block gap" (click)='goBack()'>Back</button>
+    </div>
+    </div>

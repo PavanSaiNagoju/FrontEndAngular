@@ -1,0 +1,45 @@
+<h1>List of of Pending Loan Applications</h1>
+
+<button class="btn-success" (click)='back()'>Back</button><br><br>
+<!--<div class="row card-group">-->
+ <div class="card-deck">
+ 
+ <div *ngFor="let loan of loanapplications">
+ <div class="card bg-dark text-white ">
+ <div class="card-body text-centre ">
+ 
+ <p class="card-title text-centre"> DoorNo: {{loan.doorNo}}</p>
+ <p class="card-text">Existing EMI : {{loan.existingEMI}}</p>
+ <p class="card-text">Tenure : {{loan.tenure}}</p>
+ <p class="card-text">Interest Rate : {{loan.interest}}</p>
+ <p class="card-text">Amount: {{loan.amount}}</p>
+ <p class="card-text">Application Date: {{loan.appdate}}</p>
+ <p class="card-text">Status : {{loan.status}}</p>
+ 
+ <p class="card-text">UserId: {{loan.user.userId}}</p>
+ <p class="card-text">Address: {{loan.user.address}}</p>
+ <p class="card-text">State: {{loan.user.state}}</p>
+ <p class="card-text">City: {{loan.user.city}}</p>
+ <p class="card-text">Pin: {{loan.user.pin}}</p>
+ <p class="card-text">EmpType: {{loan.user.emptype}}</p>
+ <p class="card-text">Salary: {{loan.user.salary}}</p>
+ <p class="card-text">Aadhar:<a href="{{loan.user.aadhar}}">{{loan.user.aadhar}}</a></p>
+ <p class="card-text">Pan: <a href="{{loan.user.pan}}">{{loan.user.pan}}</a></p>
+ <p class="card-text">SalarySlip:<a href="{{loan.user.salarySlip}}">{{loan.user.salarySlip}}</a></p>
+ <p class="card-text">AddressProof:<a href="{{loan.user.addressProof}}">{{loan.user.addressProof}}</a></p>
+ <p class="card-text"><button (click)='myFunc(loan)'> Verify Loan</button></p>
+ 
+ <!--p class="card-text"><button (click)='rejectLoan(loan)'> RejectLoan</button></p-->
+
+ 
+ 
+ </div>
+ 
+</div>
+<br>
+</div>  
+ 
+<div>
+    <br><br>
+    
+  

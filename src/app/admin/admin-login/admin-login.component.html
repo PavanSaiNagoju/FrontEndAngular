@@ -1,0 +1,22 @@
+<link rel = "stylesheet" type="text/css" href="admin-login.component.css">
+
+<body>
+  <div class="container col-md-10">
+    <div class="row justify-content-center">
+      <h1 class="row justify-content-center top" style="color:black">ADMIN LOGIN</h1>
+      </div> 
+    <div>
+      <form (ngSubmit)="Login()" #form="ngForm">
+        <label style="color: rgb(18, 7, 7);">Email:</label><br>
+        <input type="text" name="email" #adminName="ngModel" id="email" class="form-control" [(ngModel)]="admin.email" autocomplete="true" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small><br>
+        
+        <label style="color: rgb(19, 2, 2);">Password:</label><br>
+        <input type="password" name="password" id="password" #adminPassword="ngModel" class="form-control" [(ngModel)]="admin.password" required><br>
+        <h5 class="row justify-content-center">
+        <input type="submit" name="submit" style="color: rgb(21, 2, 2);" class="btn btn-outline-secondary" value="Submit"> 
+        </h5>
+  </form>
+    </div>
+  </div>
+</body>

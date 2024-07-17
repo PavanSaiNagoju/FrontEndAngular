@@ -1,0 +1,64 @@
+<body>
+  <div class="container col-md-10">
+    <div class="row justify-content-center">
+      <h1 class="row justify-content-center top" style="color:black;">USER LOGIN</h1>
+      </div> 
+    <div>
+      <form (ngSubmit)="Login()" #form="ngForm">
+        <label style="color: black;">Email:</label><br>
+        <input type="text" name="email" #userName="ngModel" id="email" class="form-control" [(ngModel)]="logs.email" autocomplete="true" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small><br>
+        
+        <label style="color: black;">Password:</label><br>
+        <input type="password" name="password" id="password" #userPassword="ngModel" class="form-control" [(ngModel)]="logs.password" required><br>
+        <h5 class="row justify-content-center">
+        <input type="submit" name="submit" style="color: black;" class="btn btn-outline-secondary" value="Login"> 
+        </h5>
+  </form>
+  <br>
+  <h3 class="row justify-content-center">
+          <button  name="Register" (click)="userAdd()" style="color:black" class="btn btn-outline-secondary">User Register</button>
+        </h3>
+        </div>
+  </div>
+</body>
+
+<!--<div class = "container mt-5">    
+    <section class="row justify-content-center">
+    <h1 style="color: maroon;">USER LOGIN </h1>
+    </section>
+    <body>
+        <section class="container-fluid">
+        <section class="row justify-content-center"> 
+        <section class="col-12 col-sm-6 col-md-3">
+        <link rel = "stylesheet" type="text/css" href="user-login.component.css">
+        <body class="form-container"> 
+            <form (ngSubmit)="Login()" #form="ngForm">
+              <h3 class="text-center text-info"></h3>
+              <div class="form-group">
+                  <label for="username" style="color: maroon;">Email:</label><br>
+                  <input  type="text" class="form-control" name="email" #userNam1="ngModel" id="email" class="form-control" [(ngModel)]="logs.email" required>
+              </div>
+              <div class="form-group">
+                  <label for="password" style="color: maroon;">Password:</label><br>
+                  <input type="password" class="form-control" name="password" id="password" #userPassw1="ngModel" class="form-control" [(ngModel)]="logs.password" required>
+              </div>
+              
+              
+                  <button type="submit" name="login" style="color:Maroon" class="btn-block"><b>Login</b></button>
+                 
+             
+           
+            
+          </form>  
+          <br>
+          <button  name="Register" (click)="userAdd()" style="color:Maroon" class="btn-block"><b>Register</b></button>
+       
+        </body>  
+    </section>
+</section>
+</section>
+    </body>
+    </div>
+-->
+

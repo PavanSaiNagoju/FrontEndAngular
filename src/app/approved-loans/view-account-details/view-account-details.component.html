@@ -1,0 +1,17 @@
+<h1>Approved Loan Applications details including account Number , EMI</h1>
+<!--<div class="row card-group">-->
+ <div class="card-deck">
+ 
+ <div *ngFor="let approve of approveLoans">
+ <div class="card bg-dark text-white ">
+ <div class="card-body text-centre ">
+<p class="card-text"> User Id : {{approve.loanapp.user.userId}}</p>
+<p class="card-text"> DoorNo : {{approve.loanapp.doorNo}}</p>
+ <p class="card-text"> Account Number : {{approve.account.accountNo}}</p>
+ <p class="card-text">Loan Id : {{approve.loanId}}</p>
+ <p class="card-text">EmI : {{approve.emi}}</p>
+ </div>
+ </div>
+ <br>
+</div>
+</div> 
